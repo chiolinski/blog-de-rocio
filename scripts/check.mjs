@@ -16,7 +16,7 @@ for(const file of htmlFiles){
   for(const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
     const target = match[1].replaceAll('&amp;','&');
     if (/^(https?:|mailto:|tel:|#|data:)/.test(target) || target.startsWith('/')) continue;
-    const resolved = path.resolve('dist',path.dirname(file),decodeURIComponent(target.split('#')[0]));
+    const resolved = path.resolve('dist',path.dirname(file),decodeURIComponent(target.split(/[?#]/)[0]));
     assert.ok(resolved.startsWith(path.resolve('dist')),`Enlace fuera de dist: ${target}`);
     await fs.access(resolved).catch(()=>{throw Error(`Enlace roto en ${file}: ${target}`)});
     checked++;

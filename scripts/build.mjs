@@ -24,7 +24,7 @@ function content(p, root) {
 }
 function shell(title, body, root = './', description = 'Relatos, fotografías y pequeñas historias de Rocío Rodríguez Urrutia. De Chile a Berlín y más allá.', extra='') {
  return `<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${escape(description)}"><meta name="theme-color" content="#f6f3ec"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:type" content="${extra ? 'article' : 'website'}"><title>${escape(title)}</title><link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${root}assets/style.css"><script src="${root}assets/app.js" defer></script></head>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${escape(description)}"><meta name="theme-color" content="#ffde59"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:type" content="${extra ? 'article' : 'website'}"><title>${escape(title)}</title><link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${root}assets/style.css?v=cv1"><script src="${root}assets/app.js" defer></script></head>
 <body><a class="skip" href="#contenido">Saltar al contenido</a><header class="header"><a class="brand" href="${root}" aria-label="Blog de Rocío, inicio">ro<span>cí</span>o<span class="brand-dot">.</span></a><nav aria-label="Principal"><a href="${root}#historias">Historias</a><a href="${root}sobre-mi/">Acerca de mí</a><a class="nav-note" href="${root}#archivo">El archivo <span aria-hidden="true">↗</span></a></nav></header>
 ${body}
 <footer class="footer"><a class="brand" href="${root}">rocío.</a><p>Palabras para recordar.<br>Fotografías para volver.</p><div><span>© ${new Date().getUTCFullYear()} Rocío Rodríguez Urrutia</span><a href="${root}sobre-mi/">Acerca de mí ↗</a></div></footer></body></html>`;
@@ -59,3 +59,4 @@ for (const p of data) {
 await fs.writeFile('dist/404.html', shell('Página no encontrada · Blog de Rocío', '<main id="contenido" class="article-top"><p class="eyebrow">404 · NOS PERDIMOS UN POQUITO</p><h1>Esta página no está aquí.</h1><p>Puedes volver al blog para encontrar otra historia.</p><a class="button" href="/blog-de-rocio/">Volver al inicio ↗</a></main>', '/blog-de-rocio/'));
 await fs.writeFile('dist/.nojekyll','');
 console.log(`Web generada: ${posts.length} entradas, ${pages.length} páginas y ${Object.keys(media).length} imágenes locales.`);
+
