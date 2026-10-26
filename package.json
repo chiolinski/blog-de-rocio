@@ -1,0 +1,11 @@
+{
+  "name": "blog-de-rocio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "media": "node scripts/download-media.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}
