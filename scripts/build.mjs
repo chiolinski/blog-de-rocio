@@ -64,9 +64,10 @@ for (const p of data) {
  await fs.mkdir(`dist/${route(p)}`, {recursive:true});
  await fs.writeFile(`dist/${route(p)}index.html`,shell(`${p.titulo} · Blog de Rocío`,body,root,plain(p.contenido_html).slice(0,160) || p.titulo, p.tipo==='post'?'article':''));
 }
-await fs.writeFile('dist/404.html', shell('Página no encontrada · Blog de Rocío', '<main id="contenido" class="article-top"><p class="eyebrow">404 · NOS PERDIMOS UN POQUITO</p><h1>Esta página no está aquí.</h1><p>Puedes volver al blog para encontrar otra historia.</p><a class="button" href="/blog-de-rocio/">Volver al inicio ↗</a></main>', '/blog-de-rocio/'));
+await fs.writeFile('dist/404.html', shell('Página no encontrada · Blog de Rocío', '<main id="contenido" class="article-top"><p class="eyebrow">404 · NOS PERDIMOS UN POQUITO</p><h1>Esta página no está aquí.</h1><p>Puedes volver al blog para encontrar otra historia.</p><a class="button" href="https://elblogderocio.com/">Volver al inicio ↗</a></main>', 'https://elblogderocio.com/'));
 await fs.writeFile('dist/.nojekyll','');
 console.log(`Web generada: ${posts.length} entradas, ${pages.length} páginas y ${Object.keys(media).length} imágenes locales.`);
+
 
 
 

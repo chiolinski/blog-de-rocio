@@ -2,7 +2,7 @@
 
 Blog personal de Rocío Rodríguez Urrutia. Relatos, fotografías y viajes, de Chile a Berlín y más allá.
 
-Sitio: https://chiolinski.github.io/blog-de-rocio/
+Sitio: https://elblogderocio.com/
 
 ## Trabajar en el blog
 
@@ -28,3 +28,4 @@ Para agregar una entrada, se añade un objeto a `contenido/publicaciones.json` c
 Las fotografías incluidas son copias locales. Los videos siguen usando sus direcciones originales de WordPress. No se trasladan formularios, comentarios interactivos ni funciones de administración de WordPress: este es un blog estático.
 
 Los textos y las imágenes conservan los derechos de sus respectivos titulares.
+
