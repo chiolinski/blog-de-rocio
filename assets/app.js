@@ -13,6 +13,7 @@
     for (const card of cards) {
       const matches = (year === 'all' || card.dataset.year === year) && normalize(card.dataset.search).includes(term);
       if (matches) found++;
+      if (matches) card.dataset.layout = String((found - 1) % 4);
       card.hidden = !matches || found > limit;
     }
     more.hidden = found <= limit;

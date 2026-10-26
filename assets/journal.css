@@ -1,0 +1,99 @@
+/* Dirección editorial: la voz y la presencia de Rocío como protagonistas. */
+:root{--paper:#faf6ee;--ink:#291d22;--muted:#6c5d63;--line:#d7c9c8;--green:#eee5e2;--cherry:#73132e;--accent:#ffde59}
+body{background:var(--paper)}
+.header{padding-top:20px;padding-bottom:20px;border-bottom:0}
+.header .brand,.footer .brand{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:var(--cherry);letter-spacing:-3px;font-style:italic}
+.header nav{font-size:11px;letter-spacing:.5px}
+.journal{--note-font:Arial,Helvetica,sans-serif}
+.journal mark{background:linear-gradient(transparent 70%,#ffde5990 70%);color:inherit}
+.diva-cover{max-width:1320px;padding:12px 56px 0;margin:auto;color:var(--cherry)}
+.diva-kicker{font-size:9px;letter-spacing:3.2px;text-align:center}
+.diva-cover h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(120px,18vw,250px);font-weight:400;line-height:.88;letter-spacing:-15px;text-align:center;margin:39px 0 26px;position:relative}
+.diva-cover h1>span{font-size:37px;letter-spacing:0;display:inline-block;vertical-align:top;margin:12px 0 0 14px;color:var(--cherry)}
+.diva-edition{border-top:1px solid var(--cherry);border-bottom:1px solid var(--cherry);display:flex;justify-content:space-between;padding:9px 0;font-size:8px;letter-spacing:1.5px}
+.diva-stage{display:grid;grid-template-columns:1fr 1.3fr .66fr;gap:45px;padding:39px 0 40px;align-items:center}
+.diva-number{font-size:8px;letter-spacing:1.6px;line-height:1.8}
+.diva-intro h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(45px,5.5vw,73px);line-height:1;letter-spacing:-2.5px;font-weight:400;margin:20px 0}
+.diva-intro h2 em{font-weight:400}
+.diva-intro>p{font-size:12px;line-height:1.9;color:var(--muted);margin:24px 0}
+.diva-button{font-size:9px;letter-spacing:1px;display:inline-flex;gap:22px;background:var(--cherry);color:var(--paper);padding:16px 19px;border:1px solid var(--cherry)}
+.diva-button:hover{background:var(--paper);color:var(--cherry)}
+.diva-portrait{margin:0;align-self:stretch;position:relative}
+.diva-portrait>a{display:block;height:calc(100% - 33px);min-height:370px;overflow:hidden;border:1px solid var(--cherry);padding:7px}
+.diva-portrait img{width:100%;height:100%;object-fit:cover;object-position:center;min-height:370px;max-height:470px}
+.diva-portrait figcaption{display:flex;justify-content:space-between;align-items:center;gap:15px;padding-top:12px;font-size:8px;letter-spacing:.4px}
+.diva-portrait figcaption>span{font-size:7px;letter-spacing:1px}
+.diva-aside{align-self:center;position:relative;padding-top:42px}
+.diva-sparkle{position:absolute;top:-22px;left:5px;font-family:Georgia,serif;font-size:58px;line-height:1;font-weight:400}
+.diva-aside>.diva-number{margin-bottom:13px}
+.diva-postcard{display:block}
+.diva-postcard img{width:100%;aspect-ratio:.9;object-fit:cover}
+.diva-postcard>span{display:block;font-size:9px;margin-top:9px;line-height:1.5}
+.diva-aside blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:23px;line-height:1.25;margin:22px 0 10px;letter-spacing:-.5px}
+.diva-quote-link{font-size:8px;color:var(--muted);line-height:1.6;display:block}
+.diva-bottom{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--cherry);padding:18px 0;font-size:10px}
+.diva-bottom>span:first-child{font-size:8px;letter-spacing:1.7px;margin-right:auto}
+.diva-bottom>span:last-child{font-size:16px;margin-left:40px}
+.journal .eyebrow,.journal .story-count,.journal .card-meta{font-family:Arial,Helvetica,sans-serif;font-weight:400}
+.journal .eyebrow{font-size:8px;letter-spacing:2.2px;color:var(--cherry)}
+.journal .stories.section{padding-top:75px;padding-bottom:80px}
+.journal .section-heading{border-bottom:0;padding-bottom:0}
+.journal .section-heading h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:58px;line-height:1.04;letter-spacing:-2.2px;color:var(--cherry)}
+.journal .section-heading h2 span{font-style:italic}
+.journal .tools{margin-top:30px;margin-bottom:45px;border-bottom:1px solid var(--line)}
+.journal .year-filters button{font-size:10px;font-weight:400;border-radius:20px}
+.journal .year-filters button.active{background:var(--cherry);color:var(--paper)}
+.journal .search{border-bottom:1px solid var(--cherry)}
+.journal .search input{font-size:11px}
+.journal .story-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:0;row-gap:65px;align-items:start}
+.journal .story-card:nth-child(4n+1),.journal .story-card[data-layout="0"]{grid-column:1/8;margin-top:0}
+.journal .story-card:nth-child(4n+2),.journal .story-card[data-layout="1"]{grid-column:9/-1;margin-top:90px}
+.journal .story-card:nth-child(4n+3),.journal .story-card[data-layout="2"]{grid-column:1/5;margin-top:0}
+.journal .story-card:nth-child(4n),.journal .story-card[data-layout="3"]{grid-column:6/-1;margin-top:65px}
+.journal .story-card[data-layout="0"]{grid-column:1/8;margin-top:0}
+.journal .story-card[data-layout="1"]{grid-column:9/-1;margin-top:90px}
+.journal .story-card[data-layout="2"]{grid-column:1/5;margin-top:0}
+.journal .story-card[data-layout="3"]{grid-column:6/-1;margin-top:65px}
+.journal .card-image{aspect-ratio:1.55;background:var(--green)}
+.journal .story-card[data-layout="1"] .card-image,.journal .story-card[data-layout="2"] .card-image{aspect-ratio:.95}
+.journal .image-arrow{background:var(--paper);color:var(--cherry);width:31px;height:31px;border-radius:50%;font-size:18px;font-weight:400}
+.journal .card-meta{font-size:8px;letter-spacing:1px;margin-top:15px;text-transform:uppercase}
+.journal .story-card h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:var(--cherry);font-size:39px;line-height:1.08;letter-spacing:-1.4px;max-width:590px}
+.journal .story-card[data-layout="1"] h3,.journal .story-card[data-layout="2"] h3{font-size:31px;letter-spacing:-.8px}
+.journal .story-card>p{max-width:500px;font-size:13px;line-height:1.9}
+.journal .read-link{font-size:9px;letter-spacing:1px;text-transform:uppercase;font-weight:400;border-bottom:1px solid var(--cherry);gap:25px;color:var(--cherry)}
+.journal .load-more{font-size:10px;font-weight:400;letter-spacing:1px;padding:15px 30px;border:1px solid var(--cherry);margin-top:55px;color:var(--cherry)}
+.journal .load-more:hover{background:var(--cherry);color:var(--paper)}
+.journal-interlude{max-width:1208px;margin:10px auto 25px;background:var(--cherry);color:var(--paper);text-align:center;padding:55px 15%}
+.journal-interlude>.eyebrow{color:var(--paper);font-size:8px;margin-bottom:25px}
+.journal-interlude blockquote{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:42px;line-height:1.25;font-weight:400;margin:0 0 25px;letter-spacing:-1px}
+.journal-interlude mark{background:none;border-bottom:1px solid var(--accent)}
+.journal-interlude>a{font-size:9px}
+.journal .about-band{background:transparent;max-width:1208px;padding:60px 0 70px;grid-template-columns:1fr 1fr;gap:15px 100px;border-bottom:1px solid var(--line)}
+.journal .about-band h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:var(--cherry);font-size:85px;letter-spacing:-4px;line-height:.98}
+.journal .about-band h2 em{font-weight:400}
+.journal .about-band>div{align-self:center;padding-bottom:8px;max-width:420px}
+.journal .about-band>div p{font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.5;color:var(--muted)}
+.journal .archive h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:65px;letter-spacing:-2.5px;color:var(--cherry);margin-bottom:35px}
+.journal .archive summary>span:first-child{font-family:Georgia,'Times New Roman',serif;color:var(--cherry);font-size:43px;letter-spacing:-2px;font-weight:400}
+.article-top h1{font-family:Georgia,'Times New Roman',serif;color:var(--cherry);font-weight:400;letter-spacing:-2px}
+.article-top>.eyebrow{background:transparent;border-bottom:1px solid var(--cherry);color:var(--cherry);padding-bottom:10px}
+.footer{border-color:var(--cherry)}
+@media(max-width:1000px){.diva-stage{gap:28px;grid-template-columns:1fr 1.2fr .6fr}.diva-cover h1{letter-spacing:-10px}.diva-intro h2{font-size:58px}.diva-portrait>a,.diva-portrait img{min-height:330px}.diva-aside blockquote{font-size:21px}.diva-button{font-size:8px;gap:12px;padding:14px 12px}.diva-intro>p{font-size:11px}.journal-interlude{margin-left:32px;margin-right:32px;padding:50px 10%}.journal .about-band{margin:0 32px;gap:20px 50px}.journal .about-band h2{font-size:70px}}
+@media(max-width:760px){.diva-cover{padding:10px 26px 0}.diva-cover h1{font-size:19.8vw;margin-top:23px;margin-bottom:22px;letter-spacing:-7px}.diva-cover h1>span{font-size:24px;margin:5px 0 0 8px}.diva-kicker{font-size:8px;letter-spacing:2px}.diva-edition{font-size:7px;letter-spacing:.7px}.diva-stage{grid-template-columns:1fr 1.25fr;gap:24px;padding-top:30px}.diva-aside{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.2fr;gap:0 25px;padding-top:5px;align-items:center}.diva-aside>.diva-number{grid-column:1/-1;margin:0 0 15px}.diva-sparkle{display:none}.diva-postcard{grid-row:2/4}.diva-postcard img{aspect-ratio:1.5}.diva-postcard>span{font-size:9px}.diva-aside blockquote{margin:0;font-size:27px}.diva-quote-link{margin-top:12px;align-self:start}.diva-bottom{gap:20px;font-size:10px}.diva-bottom>span:first-child{max-width:130px;line-height:1.6}.diva-bottom>span:last-child{margin-left:0}.diva-intro h2{font-size:54px}.diva-portrait>a,.diva-portrait img{min-height:310px}.diva-portrait figcaption{display:block;font-size:8px;line-height:1.7}.diva-portrait figcaption>span{display:block}.journal .section-heading h2{font-size:48px}.journal .story-card h3{font-size:34px}.journal .story-card[data-layout="1"] h3,.journal .story-card[data-layout="2"] h3{font-size:27px}}
+@media(max-width:540px){.header{padding:18px 24px}.header .brand{font-size:33px}.header nav{gap:20px;font-size:10px}.diva-cover{padding:8px 24px 0}.diva-kicker{font-size:7px;letter-spacing:1.7px}.diva-cover h1{font-size:26.5vw;letter-spacing:-7px;text-align:left;margin:25px 0 23px}.diva-cover h1>span{font-size:23px;margin-top:0;margin-left:10px}.diva-edition{font-size:6px;letter-spacing:.6px;gap:15px;line-height:1.6}.diva-stage{display:grid;grid-template-columns:1fr;gap:27px;padding:26px 0 27px}.diva-intro{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;align-items:center}.diva-intro>.diva-number{grid-column:1/-1;font-size:7px;margin-bottom:10px}.diva-intro h2{grid-row:2/4;margin:0;font-size:46px;line-height:1;letter-spacing:-1.9px}.diva-intro h2 br:last-child{display:none}.diva-intro>p{font-size:10px;line-height:1.8;margin:10px 0 14px}.diva-button{font-size:7px;letter-spacing:.5px;gap:8px;padding:12px 10px;justify-content:space-between}.diva-portrait{margin:0 17px}.diva-portrait>a{min-height:0;height:auto;padding:6px}.diva-portrait img{aspect-ratio:1;min-height:0;max-height:none;height:auto}.diva-portrait figcaption{display:flex;font-size:8px;line-height:1.5}.diva-portrait figcaption>span{display:block;font-size:6px}.diva-aside{gap:0 25px}.diva-aside blockquote{font-size:25px}.diva-postcard img{aspect-ratio:1.1}.diva-aside>.diva-number{font-size:7px}.diva-postcard>span{font-size:8px}.diva-quote-link{font-size:8px}.diva-bottom{gap:16px;flex-wrap:wrap;font-size:9px;padding:15px 0}.diva-bottom>span:first-child{max-width:none;flex-basis:100%;font-size:7px;letter-spacing:1.5px}.diva-bottom>span:last-child{margin-left:auto}.journal .stories.section{padding-top:48px;padding-bottom:45px}.journal .section-heading h2{font-size:40px;letter-spacing:-1.5px}.journal .tools{margin:23px 0 30px}.journal .story-grid{display:block}.journal .story-card,.journal .story-card[data-layout]{margin:0 0 42px}.journal .card-image{aspect-ratio:1.35}.journal .story-card[data-layout="1"] .card-image,.journal .story-card[data-layout="2"] .card-image{aspect-ratio:1.1}.journal .story-card[data-layout="1"],.journal .story-card[data-layout="2"]{width:88%}.journal .story-card[data-layout="1"]{margin-left:auto}.journal .story-card h3,.journal .story-card[data-layout="1"] h3,.journal .story-card[data-layout="2"] h3{font-size:31px;letter-spacing:-.8px}.journal .card-meta{font-size:7px}.journal .load-more{margin-top:10px}.journal-interlude{margin:0 24px;padding:34px 23px}.journal-interlude blockquote{font-size:29px;letter-spacing:-.5px}.journal .about-band{display:block;margin:0 24px;padding:42px 0}.journal .about-band>.eyebrow{margin-bottom:20px}.journal .about-band h2{font-size:66px;letter-spacing:-3px}.journal .about-band>div{margin-top:25px;max-width:320px}.journal .about-band>div p{font-size:22px}.journal .archive h2{font-size:46px;letter-spacing:-1.5px}.journal .archive summary>span:first-child{font-size:34px}}
+
+/* Edición de moda: contraste, tipografía y fotografía antes que ornamentos. */
+:root{--paper:#fffdf8;--ink:#171315;--muted:#665e61;--line:#d5cdcd;--cherry:#71122c}
+.diva-cover h1{color:var(--ink)}
+.diva-kicker{color:var(--ink);font-size:9px;letter-spacing:2.8px}
+.diva-edition{border-color:var(--ink);color:var(--ink)}
+.diva-portrait>a{border-color:#b2a3a5;padding:5px}
+.diva-intro h2{color:var(--ink)}
+.diva-intro h2 em{color:var(--cherry)}
+.diva-cover h1>span{font-size:24px;vertical-align:middle;margin-top:0}
+.diva-sparkle{font-size:38px;top:-5px}
+.diva-bottom{border-bottom-color:var(--ink);color:var(--ink)}
+.journal .section-heading h2,.journal .story-card h3,.journal .archive h2{color:var(--ink)}
+.journal .section-heading h2 span{color:var(--cherry)}
+@media(max-width:540px){.diva-kicker{font-size:7px;letter-spacing:1.4px}.diva-cover h1>span{font-size:17px;vertical-align:middle;margin-top:0;margin-left:10px}.diva-intro{grid-template-columns:1.2fr 1fr;gap:0 20px}.diva-intro h2{grid-column:1/-1;grid-row:auto;font-size:53px;line-height:1.02;letter-spacing:-1.8px;margin-bottom:12px}.diva-intro h2>br{display:block}.diva-intro h2 em>br{display:none}.diva-intro>p{font-size:11px;line-height:1.8;margin:4px 0 0}.diva-button{font-size:8px;letter-spacing:.4px;line-height:1.5;padding:13px 11px}.diva-intro>.diva-number{margin-bottom:13px}.diva-portrait{margin:0 10px}}
